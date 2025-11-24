@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+                <script>
+            // Save scroll position
+            window.addEventListener("beforeunload", function () {
+                localStorage.setItem("scrollPos", window.scrollY);
+            });
+
+            // Restore scroll position
+            window.addEventListener("load", function () {
+                const scrollPos = localStorage.getItem("scrollPos");
+                if (scrollPos) {
+                    window.scrollTo(0, parseInt(scrollPos));
+                }
+            });
+        </script>
+
+       <p>My Shop</p>
+        
+    
+    </body>
+</html>
